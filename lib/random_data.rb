@@ -9,6 +9,10 @@ module RandomData
      sentences.join(" ")
    end
 
+   def self.random_email
+       "#{random_word}@#{random_word}.#{random_word}"
+   end
+
 
    def self.random_sentence
      strings = []
@@ -17,7 +21,7 @@ module RandomData
      end
 
      sentence = strings.join(" ")
-     sentence.capitalize << "."
+     sentence.capitalize
    end
 
 

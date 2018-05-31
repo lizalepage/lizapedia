@@ -7,16 +7,24 @@
         <li>make it fun </li>
         <li>make it fierce </li>
       </ul>
+    </div>  
 
 
+  <div class="col-md-8">
+    <%= form_for @wiki do |f| %>
+      <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
 
+      <div class="form-group">
 
-<%= form_for @wiki do |f| %>
-   <%= f.label :title %>
-   <%= f.text_field :title %>
+        <%= f.label :body %>
+        <%= f.text_area :body, rows: 8, class: 'form-control' %>
+      </div>
 
-   <%= f.label :body %>
-   <%= f.text_area :body %>
-
-   <%= f.submit "Save" %>
-<% end %>
+      <%= f.submit "Save" %>
+      <% end %>
+    </div>
+  </div>
+</div<

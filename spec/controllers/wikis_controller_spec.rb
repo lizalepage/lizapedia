@@ -7,7 +7,7 @@ def login_user
 end
 
 RSpec.describe WikisController, type: :controller do
-  let(:my_user) {User.create!(email: "elepage@bowdoin.edu", password: "password", confirmed_at: Date.today)}
+  let(:my_user) {User.create!(email: "elepage@bowdoin.edu", password: "password")}
   let(:my_wiki) {Wiki.create!(title: "New Wiki Title", body: "New Wiki body", private: true, user: my_user)}
 
   before(:each) do
@@ -28,7 +28,7 @@ RSpec.describe WikisController, type: :controller do
 
   describe "GET #show" do
     it "returns http success" do
-      get :show
+      get :show, params: { id: my_wiki.id }
       expect(response).to have_http_status(:success)
     end
   end
@@ -71,8 +71,62 @@ RSpec.describe WikisController, type: :controller do
 
   describe "GET #edit" do
     it "returns http success" do
-      get :edit
+      get :edit, params: {id: my_wiki.id}
       expect(response).to have_http_status(:success)
+    end
+
+    it "renders the edit view" do
+      get :edit, params: {id: my_wiki.id}
+      expect(response).to render_template :edit
+    end
+
+    it "assigns wiki to be updated to @wiki" do
+      get :edit, params: {id: my_wiki.id}
+
+      wiki_instance = assigns(:wiki)
+
+      expect( wiki_instance.id).to eq my_wiki.id
+      expect( wiki_instance.title).to eq my_wiki.title
+      expect( wiki_instance.body).to eq my_wiki.body
+    end
+  end
+
+  describe "PUT update" do
+    it "updates the post with expected attributes" do
+      new_title = RandomData.random_sentence
+      new_body = RandomData.random_paragraph
+
+      put :update, params: {id: my_wiki.id, wiki: {title: new_title, body: new_body }}
+
+      updated_wiki = assigns(:wiki)
+      expect(updated_wiki.id).to eq my_wiki.id
+      expect(updated_wiki.title).to eq new_title
+      expect(updated_wiki.body).to eq new_body
+    end
+
+    it "redirects to the updated post" do
+      new_title = RandomData.random_sentence
+      new_body = RandomData.random_paragraph
+
+      put :update, params:  {id: my_wiki.id, wiki: {title: new_title, body: new_body }}
+      expect(response).to redirect_to my_wiki
+    end
+
+  end
+
+  describe "DELETE destroy" do
+    it "deletes the post" do
+      delete :destroy, params: {id: my_wiki.id}
+
+      count = Wiki.where({id: my_wiki.id}).size
+
+      expect(count).to eq 0
+    end
+
+    it "redirects to post index" do
+      delete :destroy, params: {id: my_wiki.id}
+
+      expect(response).to redirect_to wikis_path
     end
   end
 end
