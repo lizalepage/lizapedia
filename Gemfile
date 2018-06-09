@@ -83,3 +83,5 @@ gem 'bootstrap-sass', '~> 3.3.7'
 
 gem 'devise'
 gem 'figaro', '1.0'
+
+gem "faker", :git => 'https://github.com/stympy/faker.git', :branch => 'master'
