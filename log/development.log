@@ -1455,3 +1455,136 @@ Processing by WikisController#index as HTML
 Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 67.244.39.255 at 2018-06-12 01:58:02 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.6.2/lib/web_console/middleware.rb:135
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 67.244.39.255 at 2018-06-12 01:58:03 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 512ms (Views: 494.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 67.244.39.255 at 2018-06-12 01:58:08 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 67.244.39.255 at 2018-06-12 01:58:08 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 67.244.39.255 at 2018-06-12 01:58:14 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 67.244.39.255 at 2018-06-12 01:58:14 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for 67.244.39.255 at 2018-06-12 01:58:20 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChargesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 67.244.39.255 at 2018-06-12 01:58:22 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4HQxh/swEp2BPxfEMT9HN64zYTwbE6ft+WdH60EWS0uHJ+MN2WutZDU+PmGRloqYBaQlNIvDqzAsv4aLNQJE+w==", "user"=>{"email"=>"llepage@woodardcurran.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "llepage@woodardcurran.com"], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/trackable.rb:40
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-12 01:58:23.028086"], ["current_sign_in_ip", "67.244.39.255"], ["sign_in_count", 2], ["updated_at", "2018-06-12 01:58:23.029922"], ["id", 7]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/trackable.rb:40
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/trackable.rb:40
+Redirected to https://f67c01630b954e839e459de51f464cff.vfs.cloud9.us-east-1.amazonaws.com/charges/new
+Completed 302 Found in 181ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/charges/new" for 67.244.39.255 at 2018-06-12 01:58:23 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `name' for #<User:0x007facf5504890>):
+  
+app/controllers/charges_controller.rb:6:in `new'
+Started GET "/users/sign_in" for 67.244.39.255 at 2018-06-12 01:58:57 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Redirected to https://f67c01630b954e839e459de51f464cff.vfs.cloud9.us-east-1.amazonaws.com/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 67.244.39.255 at 2018-06-12 01:58:58 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charges/new" for 67.244.39.255 at 2018-06-12 01:59:09 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charges/new" for 67.244.39.255 at 2018-06-12 02:07:39 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.6.2/lib/web_console/middleware.rb:135
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 271ms (Views: 245.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/charges/new" for 67.244.39.255 at 2018-06-12 02:09:09 +0000
+Cannot render console from 67.244.39.255! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ChargesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering charges/new.html.erb within layouts/application
+  Rendered charges/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+

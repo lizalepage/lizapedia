@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'charges/new'
+  get 'charges/create'
   resources :wikis
   devise_for :users
   get 'about' => 'welcome#about'
   get 'welcome/about'
+  
+  resources :charges, only: [:new, :create]
 
   root 'welcome#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
