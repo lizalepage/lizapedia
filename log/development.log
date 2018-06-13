@@ -2882,3 +2882,224 @@ Processing by WikisController#show as HTML
 Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 67.244.56.186 at 2018-06-13 10:43:15 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.6.2/lib/web_console/middleware.rb:135
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendered welcome/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 206ms (Views: 197.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/wikis" for 67.244.56.186 at 2018-06-13 10:43:19 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#index as HTML
+  Rendering wikis/index.html.erb within layouts/application
+  [1m[36mWiki Load (0.4ms)[0m  [1m[34mSELECT "wikis".* FROM "wikis"[0m
+  ↳ app/views/wikis/index.html.erb:4
+  Rendered wikis/index.html.erb within layouts/application (11.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 58ms (Views: 51.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/wikis/5" for 67.244.56.186 at 2018-06-13 10:43:22 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mWiki Load (0.2ms)[0m  [1m[34mSELECT  "wikis".* FROM "wikis" WHERE "wikis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/wikis_controller.rb:10
+  Rendering wikis/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/wikis/show.html.erb:5
+  Rendered wikis/show.html.erb within layouts/application (11.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Completed 200 OK in 42ms (Views: 38.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 67.244.56.186 at 2018-06-13 10:43:24 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XOdVy9+GbDSML98ow2DONPCkdiTzWtNhlKuIa+1qQnKiq2l77OmptFH773r+gifTkusNT0aXOfZzF4YkRiP9bQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/lib/devise/models/rememberable.rb:62
+Redirected to https://f67c01630b954e839e459de51f464cff.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 67.244.56.186 at 2018-06-13 10:43:24 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `role' for nil:NilClass):
+    1: <h1>Welcome to MADE!</h1>
+    2: <h3> Your current plan is <%= current_user.role %> </h3>
+    3: <p>Find me in app/views/welcome/index.html.erb</p>
+  
+app/views/welcome/index.html.erb:2:in `_app_views_welcome_index_html_erb___3315340507104670738_69936976921780'
+Started GET "/wikis" for 67.244.56.186 at 2018-06-13 10:43:51 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#index as HTML
+  Rendering wikis/index.html.erb within layouts/application
+  [1m[36mWiki Load (0.3ms)[0m  [1m[34mSELECT "wikis".* FROM "wikis"[0m
+  ↳ app/views/wikis/index.html.erb:4
+  Rendered wikis/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/wikis/5" for 67.244.56.186 at 2018-06-13 10:43:54 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mWiki Load (0.1ms)[0m  [1m[34mSELECT  "wikis".* FROM "wikis" WHERE "wikis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/wikis_controller.rb:10
+  Rendering wikis/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/wikis/show.html.erb:5
+  Rendered wikis/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/wikis/5/edit" for 67.244.56.186 at 2018-06-13 10:44:00 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#edit as HTML
+  Parameters: {"id"=>"5"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 67.244.56.186 at 2018-06-13 10:44:00 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wikis" for 67.244.56.186 at 2018-06-13 10:44:23 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#index as HTML
+  Rendering wikis/index.html.erb within layouts/application
+  [1m[36mWiki Load (0.3ms)[0m  [1m[34mSELECT "wikis".* FROM "wikis"[0m
+  ↳ app/views/wikis/index.html.erb:4
+  Rendered wikis/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 36ms (Views: 33.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/wikis/5" for 67.244.56.186 at 2018-06-13 10:44:24 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mWiki Load (0.2ms)[0m  [1m[34mSELECT  "wikis".* FROM "wikis" WHERE "wikis"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/wikis_controller.rb:10
+  Rendering wikis/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/wikis/show.html.erb:5
+  Rendered wikis/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/about" for 67.244.56.186 at 2018-06-13 10:44:41 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.4.1/gems/web-console-3.6.2/lib/web_console/middleware.rb:135
+Processing by WelcomeController#about as HTML
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 67.244.56.186 at 2018-06-13 10:44:42 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 201ms (Views: 178.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/wikis" for 67.244.56.186 at 2018-06-13 10:44:44 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#index as HTML
+  Rendering wikis/index.html.erb within layouts/application
+  [1m[36mWiki Load (0.5ms)[0m  [1m[34mSELECT "wikis".* FROM "wikis"[0m
+  ↳ app/views/wikis/index.html.erb:4
+  Rendered wikis/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 82ms (Views: 76.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/wikis/8" for 67.244.56.186 at 2018-06-13 10:44:46 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWiki Load (0.2ms)[0m  [1m[34mSELECT  "wikis".* FROM "wikis" WHERE "wikis"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wikis_controller.rb:10
+  Rendering wikis/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/wikis/show.html.erb:5
+  Rendered wikis/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 49ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/wikis" for 67.244.56.186 at 2018-06-13 10:44:50 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#index as HTML
+  Rendering wikis/index.html.erb within layouts/application
+  [1m[36mWiki Load (0.3ms)[0m  [1m[34mSELECT "wikis".* FROM "wikis"[0m
+  ↳ app/views/wikis/index.html.erb:4
+  Rendered wikis/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 67.244.56.186 at 2018-06-13 10:45:15 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `role' for nil:NilClass):
+    1: <h1>Welcome to MADE!</h1>
+    2: <h3> Your current plan is <%= current_user.role %> </h3>
+    3: <p>Find me in app/views/welcome/index.html.erb</p>
+  
+app/views/welcome/index.html.erb:2:in `_app_views_welcome_index_html_erb___560692546856609747_70213691836780'
+Started GET "/wikis" for 67.244.56.186 at 2018-06-13 10:45:20 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#index as HTML
+  Rendering wikis/index.html.erb within layouts/application
+  [1m[36mWiki Load (0.4ms)[0m  [1m[34mSELECT "wikis".* FROM "wikis"[0m
+  ↳ app/views/wikis/index.html.erb:4
+  Rendered wikis/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/wikis/5" for 67.244.56.186 at 2018-06-13 10:45:23 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WikisController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 67.244.56.186 at 2018-06-13 10:45:23 +0000
+Cannot render console from 67.244.56.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 56ms (Views: 36.1ms | ActiveRecord: 0.6ms)
+
+
