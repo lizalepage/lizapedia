@@ -1,47 +1,20 @@
 class WikiPolicy < ApplicationPolicy
   
-  def index?
-  
-  end
-  
-  def show?
-    
-  end
-  
-  def create?
-    
-  end
-  
-  def new?
-  
-  end
-  
-  def update?
-  
-  end
-  
-  def edit?
-    
-  end  
-  
-  
-  def destroy?
-    user.admin? || user.id == record.user_id
-  end
-  
-  
   class Scope < Scope
-      attr_reader :user, :wiki 
+      attr_reader :user, :scope 
   
-    def initialize(user, wiki)
+    def initialize(user, scope)
       @user = user
       @scope = scope
-      
     
     end
     
     def resolve
       scope
     end
+  end
+  
+  def destroy?
+    user.admin? || user.id == record.user_id
   end
 end
