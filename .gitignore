@@ -22,7 +22,7 @@
 
 # Ignore application configuration
 /config/application.yml
-/config/database.yml
+
 
 # Ignore db dump if I leave it in during a commit
 latest.dump
