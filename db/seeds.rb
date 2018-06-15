@@ -1,9 +1,9 @@
-require 'random_data'
+require 'faker'
 
 5.times do
   User.create!(
-    email: RandomData.random_email,
-    password: RandomData.random_sentence
+    email: Faker::Internet.email,
+    password: Faker::Coffee.blend_name
   )
 
 end
@@ -14,8 +14,8 @@ users = User.all
 
   wiki = Wiki.create!(
     user: users.sample,
-    title: RandomData.random_sentence,
-    body: RandomData.random_paragraph
+    title: Faker::NewGirl.quote,
+    body: Faker::MostInterestingManInTheWorld.quote 
   )
 end
 
