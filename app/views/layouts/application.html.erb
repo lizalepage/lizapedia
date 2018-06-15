@@ -12,32 +12,37 @@
 
   <body>
     <div class= "container">
-    <ul class="nav justify-content-end">
-      <% if user_signed_in? %>
-        <li class="nav-item"> Signed in as: <strong><%= current_user.email %></strong> </br>
-        <li class="nav-item"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> - <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </li>
-      <% else %>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <%= link_to "Home", root_path, :class => 'nav-link' %>
+          </li>
+          <li class= "nav-item">
+            <%= link_to " About", about_path, :class => 'nav-link' %>
+          </li>
+          <li class= "nav-item">
+            <%= link_to "Wikis", wikis_path, :class => 'nav-link'  %>
+          </li>
+          
+        <div class="pull-right">  
+            <% if user_signed_in? %>
+              <li class="pull-right"> Signed in as: <strong><%= current_user.email %></strong> </li> </br>
+              <li class="pull-right"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li> </br> 
+              <li class="pull-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </li>
+            <% else %>
 
-        <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %>
-        <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
+              <li class= "pull-right"><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %> </li> </br>
+              <li class="pull-right"><%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %> </li>
 
-      <% end %>
-    </ul>
-    <ul class="nav nav-tabs">
+            <% end %>
+          </div>        
+        </ul>
+     
+      
+     
 
-        <li class="nav-item">
-          <%= link_to "Home", root_path, :class => 'nav-link' %>
-        </li>
-        <li class= "nav-item">
-          <%= link_to " About", about_path, :class => 'nav-link' %>
-        </li>
-        <li class= "nav-item">
-          <%= link_to "Wikis", wikis_path, :class => 'nav-link'  %>
-        </li>
-      </ul>
-
-      <%= flash_messages %>
-
+        <%= flash_messages %>
+      
+      
       <%= yield %>
     </div>
 
