@@ -2,7 +2,8 @@
 <% if user_signed_in? %>
 <h3> Your current plan is <%= current_user.role %> </h3>
     <% if current_user.premium? %>
-        <%= link_to "downgrade", downgrade_create_path, class: 'btn btn-success' %>
+        <%= link_to "downgrade", downgrade_create_path, class: 'btn btn-success', data: {confirm: 'Are you sure you want to downgrade?'} %>
+
     <% else %>
         <%= link_to "upgrade", charges_new_path, class: 'btn btn-success' %>
     <% end %>    
