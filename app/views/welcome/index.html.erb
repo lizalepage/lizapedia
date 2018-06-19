@@ -1,3 +1,11 @@
 <h1>Welcome to MADE!</h1>
+<% if user_signed_in? %>
 <h3> Your current plan is <%= current_user.role %> </h3>
-<p>Find me in app/views/welcome/index.html.erb</p>
+    <% if current_user.premium? %>
+        <%= link_to "downgrade", downgrade_create_path, class: 'btn btn-success' %>
+    <% else %>
+        <%= link_to "upgrade", charges_new_path, class: 'btn btn-success' %>
+    <% end %>    
+<% else %> 
+Sign up today to get invovled in the action!
+<% end %>

@@ -8,6 +8,8 @@ require 'faker'
 
 end
 
+User.create!(email: 'lizalepage@gmail.com', password: 'bubbles16')
+
 users = User.all
 
 50.times do

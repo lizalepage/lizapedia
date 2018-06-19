@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'downgrade/create'
+  get 'downgrade/new'
   get 'charges/new'
   get 'charges/create'
   resources :wikis
