@@ -1,5 +1,14 @@
 
 module ApplicationHelper
+  
+  def markdown(text)
+    
+    renderer = Redcarpet::Render::HTML.new(render_options)
+    markdown = Redcarpet::Markdown.new(renderer, extensions)
+    
+    markdown.render(text).html_safe
+  
+  end  
 
 
   def bootstrap_class_for flash_type
