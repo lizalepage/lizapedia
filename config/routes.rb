@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   get 'downgrade/new'
   get 'charges/new'
   get 'charges/create'
-  resources :wikis
+  
+  resources :wikis do
+    resources :collaborators, only: [:new, :create, :destroy]
+  end
+  
   devise_for :users
   get 'about' => 'welcome#about'
   get 'welcome/about'

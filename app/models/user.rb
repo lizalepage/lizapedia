@@ -8,7 +8,8 @@ class User < ApplicationRecord
 
   after_initialize {self.role ||= :standard}
 
-  has_many :wikis       
+  has_many :wikis, dependent: :destroy
+  has_many :collaborators, dependent: :destroy
 
 
   enum role: [:standard, :premium, :admin]
