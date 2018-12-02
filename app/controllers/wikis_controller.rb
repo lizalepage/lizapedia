@@ -1,10 +1,11 @@
 class WikisController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+
+
 
 
   def index
     @wikis = Wiki.all
-    authorize(Wiki)
+
   end
 
   def show
@@ -14,7 +15,7 @@ class WikisController < ApplicationController
 
   def new
       @wiki = Wiki.new
-      authorize @wiki
+      
   end
 
   def create
@@ -55,7 +56,7 @@ class WikisController < ApplicationController
 
     def destroy
       @wiki = Wiki.find(params[:id])
-      authorize @wiki 
+      authorize @wiki
 
       if @wiki.destroy
         flash[:notice] = "#{@wiki.title} was deleted successfully."
@@ -72,8 +73,8 @@ class WikisController < ApplicationController
   def wiki_params
     params.require(:wiki).permit(:title, :body, :private)
   end
-  
 
-  
-  
+
+
+
 end

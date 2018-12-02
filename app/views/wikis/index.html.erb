@@ -1,7 +1,9 @@
+<script>blocmetrics.report('wiki page loaded');</script>
+
 <h1>Wikis</h1>
 <div class="row">
    <div class="col-md-8">
-        
+
          <% @wikis.each do |wiki| %>
              <% unless wiki.private? %>
              <div class="media">
@@ -11,7 +13,7 @@
                 </h4>
               </div>
             </div>
-        <% end %>    
+        <% end %>
 
 
 
@@ -20,21 +22,5 @@
   <div class="col-md-4">
 
     <%= link_to "New Wiki", new_wiki_path, class: 'btn btn-success' %>
-    <h3> My Private Wikis </h3>
-     <% if @current_user.standard? %>
-            You need to upgrade to Premium to create private wikis
-    <% else %>        
-        <% @wikis.each do |wiki| %>
-            <%if wiki.private? && wiki.user = current_user %>
-                <div class="media">
-                   <div class="media-body">
-                     <h4 class="media-heading">
-                         <%= link_to wiki.title, wiki %>
-                    </h4>
-                   </div>
-                </div>
-            <% end %>    
-        <% end %>     
-    <% end %>
-    </div>     
+    </div>
 </div>
